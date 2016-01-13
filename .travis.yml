@@ -13,6 +13,7 @@ before_script:
 script: 
   - cd ..
   - mkdir build
+  - cd build
   - cmake ../semex
   - make
   - cd TheLib-build
