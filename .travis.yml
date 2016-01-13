@@ -1,5 +1,5 @@
-# not using sudo
-sudo: false
+# sudo
+sudo: required
 
 language: cpp
 
@@ -9,7 +9,7 @@ compiler:
 # install itk to speed up build
 before_script:
   - cmake --version
-  - apt-get install libinsighttoolkit4-dev
+  - sudo apt-get install libinsighttoolkit4-dev
 
 script: 
   - cd ..
