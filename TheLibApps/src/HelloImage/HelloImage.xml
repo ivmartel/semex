@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<executable>
+  <category>Demo</category>
+  <title>Hello Image</title>
+  <description>Test a simple image filter.</description>
+  <version>1.0</version>
+  <documentation-url></documentation-url>
+  <license></license>
+  <contributor></contributor>
+  <acknowledgements></acknowledgements>
+  <parameters>
+    <label>Input/Output</label>
+    <description>Input/output parameters</description>
+    <image>
+      <name>inputImage</name>
+      <label>Input Image</label>
+      <channel>input</channel>
+      <index>0</index>
+      <default>None</default>
+      <description>Input image.</description>
+    </image>
+    <image>
+      <name>outputImage</name>
+      <label>Output Image</label>
+      <channel>output</channel>
+      <index>1</index>
+      <default>None</default>
+      <description>Input image filtered.</description>
+    </image>
+  </parameters>
+  <parameters>
+    <label>Options</label>
+    <description>Filter Options.</description>
+    <integer>
+      <name>thresholdBelowValue</name>
+      <flag>t</flag>
+      <longflag>threshold</longflag>
+      <description>The filter threshold below value.</description>
+      <label>Filter Threshold Below Value</label>
+      <default>0</default>
+    </integer>
+  </parameters>
+</executable>
+

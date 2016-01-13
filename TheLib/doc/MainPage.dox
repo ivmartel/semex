@@ -1,0 +1,25 @@
+# Main page for the documentation of this library.
+/**
+
+\mainpage TheLibPack
+
+\section introduction_sec Introduction
+ITK examples instanciations.
+\li filter: thelib::ApplyMaskImageFilter
+\li mutltithreaded filter: thelib::ApplyMaskImageFilterParallel
+\li pipeline: see applications and testing
+\li command: thelib::CommandObserver
+\li IO and IOFactory: thelib::NewImageIO and thelib::NewImageIOFactory
+
+\section details_sec Details
+\li Library maintainer: Yves
+\li Library license: Open Source
+
+\section depends_sec Dependencies
+The dependencies of the library:
+\li ITK: http://www.itk.org
+\li SlicerExecutionModel: https://github.com/Slicer/SlicerExecutionModel
+
+Downloaded using CMake ExternalProject_Add.
+
+*/

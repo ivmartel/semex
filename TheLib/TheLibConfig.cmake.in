@@ -1,0 +1,5 @@
+# TheLib source tree.
+set(TheLib_INCLUDE_DIRS "@TheLib_INCLUDE_DIRS@")
+set(TheLib_LIBRARY_DIRS "@TheLib_LIBRARY_DIRS@")
+set(TheLib_LIBRARIES "@TheLib_LIBRARIES@")
+set(TheLib_USE_FILE "@TheLib_USE_FILE@")
