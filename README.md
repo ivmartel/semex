@@ -4,3 +4,5 @@ Example setting for a library with tests and associated apps using the [Slicer E
 
 Uses the CMake [External Project](https://cmake.org/cmake/help/v3.4/module/ExternalProject.html) to get ITK and SEM.
 
+[![Build Status](https://travis-ci.org/ivmartel/semex.svg?branch=master)](https://travis-ci.org/ivmartel/semex)
+
