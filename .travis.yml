@@ -1,21 +1,27 @@
 # sudo
-sudo: required
+sudo: false
+
+# Could install itk to speed up build but 
+#  travis does not seem to like it...
+#sudo: required
+#before_script:
+#  - sudo apt-get install libinsighttoolkit4-dev
+#script: 
+#  - cmake -DUSE_SYSTEM_ITK:BOOL=ON ../semex
 
 language: cpp
 
 compiler:
   - gcc
 
-# install itk to speed up build
 before_script:
   - cmake --version
-  - sudo apt-get install libinsighttoolkit4-dev
 
 script: 
   - cd ..
   - mkdir build
   - cd build
-  - cmake -DUSE_SYSTEM_ITK:BOOL=ON ../semex
+  - cmake ../semex
   - make
   - cd TheLib-build
   
