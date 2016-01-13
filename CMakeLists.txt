@@ -84,6 +84,8 @@ ExternalProject_Add(${proj}
     -DBUILD_TESTING:BOOL=ON
   #--Build step-----------------
   BINARY_DIR ${proj}-build
+  #--Test step------------------
+  TEST_BEFORE_INSTALL ON
   #--Install step---------------
   INSTALL_COMMAND ""
 )

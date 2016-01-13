@@ -6,15 +6,16 @@ language: cpp
 compiler:
   - gcc
 
+# install itk to speed up build
 before_script:
   - cmake --version
+  - apt-get install libinsighttoolkit4-dev
 
 script: 
   - cd ..
   - mkdir build
   - cd build
-  - cmake ../semex
+  - cmake -DUSE_SYSTEM_ITK:BOOL=ON ../semex
   - make
   - cd TheLib-build
-  - make test
   
