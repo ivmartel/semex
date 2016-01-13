@@ -1,0 +1,20 @@
+# not using sudo
+sudo: false
+
+language: cpp
+
+compiler:
+  - gcc
+
+before_script:
+  - cmake --version
+  - python --version
+
+script: 
+  - cd ..
+  - mkdir build
+  - cmake ../semex
+  - make
+  - cd TheLib-build
+  - make test
+  
