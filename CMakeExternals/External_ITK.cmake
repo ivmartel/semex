@@ -8,8 +8,10 @@ endif()
 # add external project
 if(NOT DEFINED ${proj}_DIR AND NOT USE_SYSTEM_${proj})
   set(${proj}_REPO ${git_protocol}://itk.org/ITK.git)
-  # version of Nov 2015
-  set(${proj}_TAG v4.8.2)
+  # Using v4.7.2 since travis (CI) provides cmake 2.8.7... Should work with more recent versions...
+  # version v4.7.2 of Apr 2015 needs cmake 2.8.6 on linux
+  # version v4.8.2 of Nov 2015 needs cmake 2.8.9
+  set(${proj}_TAG v4.7.2)
 
   message(STATUS "Setting up external project: ${proj} (${${proj}_TAG})" )
 
