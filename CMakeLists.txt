@@ -12,8 +12,7 @@ cmake_minimum_required( VERSION 2.8.7 )
 include( ExternalProject )
 
 # Global options --------------------------------
-option(BUILD_SHARED_LIBS "Build shared libraries." OFF)
-option(BUILD_TESTING "Build testing." OFF)
+option(BUILD_SHARED_LIBS "Build shared libraries." ON)
 # build type (linux)
 if(NOT WIN32)
   if(CMAKE_BUILD_TYPE STREQUAL "")
@@ -80,6 +79,7 @@ ExternalProject_Add(${proj}
   CMAKE_GENERATOR ${gen}
   CMAKE_ARGS
     -DCMAKE_CXX_FLAGS:STRING=${CMAKE_CXX_FLAGS}
+    -DBUILD_SHARED_LIBS:BOOL=${BUILD_SHARED_LIBS}
     -DITK_DIR:PATH=${ITK_DIR}
     -DBUILD_TESTING:BOOL=ON
   #--Build step-----------------
@@ -106,8 +106,10 @@ ExternalProject_Add(${proj}
   CMAKE_GENERATOR ${gen}
   CMAKE_ARGS
     -DCMAKE_CXX_FLAGS:STRING=${CMAKE_CXX_FLAGS}
+    -DBUILD_SHARED_LIBS:BOOL=${BUILD_SHARED_LIBS}
     -DITK_DIR:PATH=${ITK_DIR}
     -DSlicerExecutionModel_DIR:PATH=${SlicerExecutionModel_DIR}
+    -DGenerateCLP_DIR:PATH=${SlicerExecutionModel_DIR}/GenerateCLP
     -DTheLib_DIR:PATH=${TheLib_DIR}
     -DCMAKE_INSTALL_PREFIX:PATH=${CMAKE_BINARY_DIR}/artifacts
   #--Build step-----------------
